@@ -17,6 +17,7 @@
     <style>
         body{
             background: url("img/1.jpg");
+            background-size: cover;
             animation-name:myfirst;
             animation-duration:12s;
             /*变换时间*/
@@ -29,10 +30,10 @@
         }
         @keyframes myfirst
         {
-            0%   {background:url("img/1.jpg");}
-            34%  {background:url("img/2.jpg");}
-            67%  {background:url("img/3.jpg");}
-            100% {background:url("img/1.jpg");}
+            0%   {background:url("img/1.jpg"); background-size: cover;}
+            34%  {background:url("img/2.jpg"); background-size: cover;}
+            67%  {background:url("img/3.jpg"); background-size: cover;}
+            100% {background:url("img/1.jpg"); background-size: cover;}
         }
         #loginform{background: rgba(255,255,255,0.3);width:600px;margin:120px auto;padding: 40px}
         #loginform h1{
@@ -49,7 +50,7 @@
     <h1>LOGIN</h1>
     <div class="form-group" >
         <label for="Username">Username</label>
-        <input type="text" class="form-control" id="Username" placeholder="Username"  required>
+        <input type="text" class="form-control" id="Username" placeholder="Username"  required pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{6,12}$" title="6到10位姓名">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
